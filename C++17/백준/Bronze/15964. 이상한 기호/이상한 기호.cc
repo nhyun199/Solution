@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int atSign(int A, int B)
+long long atSign(long long A, long long B)
 {
     return (A+B)*(A-B);
 }
 
 int main()
 {
-    int A, B;
+    long long A, B;
     cin >> A >> B;
     cout << atSign(A, B);
 }
