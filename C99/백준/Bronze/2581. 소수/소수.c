@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
             continue;
         
 		bool isPrime = true;
-		for (int j = 2; j <= i - 1; j++)
+		for (int j = 2; j <= sqrt(i); j++)
 		{
 			if (i % j == 0)
 			{
