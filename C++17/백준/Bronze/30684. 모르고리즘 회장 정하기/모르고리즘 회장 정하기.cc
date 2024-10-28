@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <map>
 #include <string>
 using namespace std;
 
@@ -8,7 +7,7 @@ int main()
 {
     int N;
     cin >> N;
-    vector<string> captin;
+    map<string, int> captin;
     
     for(int i = 0; i < N; i++)
     {
@@ -16,9 +15,8 @@ int main()
         cin >> name;
         
         if(name.length() == 3)
-            captin.push_back(name);
+            captin.insert({name, i});
     }
-    sort(captin.begin(), captin.end());
     
-    cout << captin[0];
+    cout << captin.begin()->first;
 }
